@@ -53,13 +53,3 @@ resource "aws_internet_gateway" "first_ig" {
     Name = "first_ig"
   }
 }
-
-resource "aws_instance" "connect" {
-  ami           = "ami-0376ec8eacdf70aae"
-  instance_type = "t2.micro"
-  subnet_id = aws_subnet.sub1.id
-  key_name   = "ubuntukey"
-  tags = {
-    Name = "first_instance"
-  }
-}
