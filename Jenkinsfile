@@ -14,18 +14,18 @@ pipeline {
         
         stage('terraform init') {
             steps{
-                sh label: '', script: 'terraform init'
+                sh 'terraform init'
             }
         }
         
         stage('terraform apply') {
             steps{
-                sh label: '', script: 'terraform apply --auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
         stage('Terraform destroy') {
             steps {
-                sh label: '', script: 'terraform destroy --auto-approve'
+                sh 'terraform destroy --auto-approve'
             }
         }
     }
