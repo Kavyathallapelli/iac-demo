@@ -54,10 +54,10 @@ resource "aws_internet_gateway" "first_ig" {
   }
 }
 resource "aws_instance" "connect" {
-  ami           = "ami-0f8ca728008ff5af4"
+  ami           = "ami-007020fd9c84e18c7"
   instance_type = "t2.micro"
   subnet_id = aws_subnet.sub1.id
-  key_name   = "ubuntukey"
+  key_name   = "eks-cluser"
   tags = {
     Name = "first_instance"
   }
